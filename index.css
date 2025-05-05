@@ -1,3 +1,8 @@
+::selection {
+  background-color: #000000;
+  color: #fff;
+}
+
 body {
   background-color: #303030;
   font-family: Times New Roman, Verdana, Geneva, Tahoma, sans-serif;
@@ -28,10 +33,7 @@ h6 {
   color: rgb(255, 255, 255);
 } 
 
-::selection {
-  background-color: #000000;
-  color: #fff;
-}
+
 
 .img-container {
   width: 700px;
