@@ -16,6 +16,11 @@ h4 {
   color: rgb(255, 255, 255);
 }
 
+::selection {
+  background-color: #000000;
+  color: #fff;
+}
+
 .nav-link:hover {
   color: black;
 }
