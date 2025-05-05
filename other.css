@@ -1,0 +1,20 @@
+body{
+    background-color: #FFCDB2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+    color: #6D6875;
+}
+
+h4{
+    color:#B5838D;
+}
+
+.nav-link:hover{
+    color: black;
+}
+
+.custom-navbar{
+    background-color: transparent;
+}

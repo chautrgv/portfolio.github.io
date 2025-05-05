@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="functions.js" defer></script>
+    <title>☆ Chelsea's Online Portfolio ☆</title>
+    <link rel="icon" type="image/png" href="https://files.catbox.moe/dcrl73.png"/>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><h2>Chelsea Alonzo</h2></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <div class="twobuttons">
+            <a class="nav-link" aria-current="page" href="projects.html"><h4>Projects</h4></a>
+            <a class="nav-link" href="contact_me.html"><h4>Contact Info</h4></a>
+          </div>
+          <div id="icons">
+            <li class="nav-item">
+            <a href="https://www.linkedin.com/in/chelsea-alonzo-076666360/" target="_blank">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://github.com/chautrgv" target="_blank">
+              <i class="bi bi-github"></i>
+            </a>
+          </li>
+          </div>
+          <div class="resume">
+            <a class="nav-link" href="images/Resume.pdf" target="_blank" download><h4>Resume</h4></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section>
+    <div class="main-image" style="height: 5px; width: 5px;">
+      <img src="images/front.jpg" alt="pfp" style="height: 710px; width: 710px;">
+    </div>
+  </section>
+  
+    <div class="aboutme">
+        <div class="img-container" style="width: 400px; height: 500px; margin-left: 5%; margin-right: 35%;">
+
+        </div>
+        <div class="col">
+            <h2>Welcome to this website.</h2>
+            <h5>Feel free to have a look around!</h3>
+        </div>
+
+<aside id="rightSidebar">
+    <h2>Updates</h2>
+    <div class="box">
+      <p>What I plan to add...</p>
+        <ul style="padding-left:10px;">
+            <li>Animate title</li>
+            <li>Draw assets; paw icon, some images, etc</li>
+        </ul>
+    </div>
+
+</div>
+
+    <!-- PAGEDOLL CODE STARTS HERE -->
+                                     <!-- ⇓ Change pagedoll image here. -->
+<div class="float bl ani"> <img src="images/pfp.png" alt="" style="height: 230px; width: 190px;">
+  <!-- ⇓ Change border, background, font, and font color properties here. -->
+<div class="capt" style="border-color:#000000;background-color:rgba(0,0,0,.75);font:11px Consolas;color:#FFFFFF;">
+<!-- Beginning of speech bubble content. -->
+<p>This portolio is still a work in progress. :)</p>
+<p>All art here was painted/drawn by Louis Wain! (Aug 5th, 1860 - Jul 4th, 1939)</p>
+<!-- End of speech bubble content. -->
+</div></div> 
+<!-- PAGEDOLL CODE ENDS HERE -->
+
+<!--the paw click effect!!-->
+<!--credit: https://scripted.neocities.org/-->
+    <script>
+
+      var b = document.body;
+      var imgurl = "https://files.catbox.moe/9o0u6d.png";
+      var size = [10, 20];
+      function rand(min, max)
+      {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+      }
+
+      function getSize()
+      {
+        return rand(size[0], size[1]);
+      }
+
+      function lerp(a,b,f)
+      {
+        return (b-a)*f+a;
+      }
+
+      function heart(x,y)
+      {
+
+      var s = getSize();
+      x -= s/2;
+      y -= s/2;
+      x = Math.floor(x) + rand(-5, 5);
+      y = Math.floor(y) + rand(-5, 5);
+      var fx = x + rand(-40, 40);
+      var fy = y + rand(-40, 40);
+      var i = document.createElement("img");
+      i.src = imgurl;
+      i.style = `pointer-events: none; position: absolute; height: ${s}px; width: ${s}px; left: ${x}px; top: ${y}px; margin-left: 0px; border-radius: 0px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; z-index: 1000000;`;
+
+      b.appendChild(i);
+
+      var f = 0;
+      var interval;
+
+      interval = setInterval(function()
+      {
+        var _x = Math.floor(lerp(x, fx, f));
+        var _y = Math.floor(lerp(y, fy, f));
+        i.style = `pointer-events: none; position: absolute; height: ${s}px; width: ${s}px; left: ${_x}px; top: ${_y}px; margin-left: 0px; border-radius: 0px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; z-index: 1000000;`;
+        
+        i.style.opacity = 1-f;
+        f += 0.01;
+
+        if (f > 1)
+        {
+          clearInterval(interval);
+          b.removeChild(i);
+        }
+      }, 10);
+      }
+
+      function bro(x,y)
+      {
+        for (var i = 0; i < 5; i++)
+        {
+          
+          heart(x,y);
+        }
+      }
+
+      b.addEventListener("click", function(event)
+      {
+        var x = event.clientX;
+        var y = event.clientY;
+        bro(x,y);
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
+<!--click code ends here-->
